@@ -1,0 +1,111 @@
+.creative-container {
+	padding: 20px;
+
+	.title-container {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 56px;
+		display: flex;
+		align-items: center;
+		padding: 0px 20px;
+		flex-direction: row;
+		justify-content: space-between;
+		z-index: 999;
+		.title {
+			font-weight: 600;
+			font-size: 20px;
+		}
+	}
+	.tab-container {
+		margin-top: 20px;
+	}
+
+	.classify-container {
+		position: absolute;
+		top: 56px;
+		left: 0px;
+		z-index: 999;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+
+		padding: 0px 10px 10px 10px;
+		flex-wrap: wrap;
+		.classify-tag {
+			cursor: pointer;
+			font-size: 14px;
+		}
+	}
+}
+
+.create-item-list {
+	margin-top: 104px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 12px;
+	box-sizing: border-box;
+
+	.empty {
+		width: 100%;
+		padding: 40px 0px;
+	}
+
+	.create-card {
+		width: 300px;
+		display: flex;
+		border: 1px solid #dedede;
+		box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.05);
+
+		border-radius: 10px;
+		transform: scale(1);
+		cursor: pointer;
+		transition: all 0.3s ease;
+		position: relative;
+		&.mobile {
+			width: 100%;
+		}
+		.collect {
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			cursor: pointer;
+			.n-tag {
+				font-size: 12px;
+				cursor: pointer;
+			}
+		}
+		&.web {
+			&:hover {
+				transform: translateY(-5px) scale(1.1);
+				z-index: 999;
+				border-color: #18a058;
+			}
+		}
+
+		.item {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			.title {
+				display: flex;
+				align-items: center;
+			}
+		}
+		.desc {
+			margin-top: 8px;
+		}
+		.avator {
+			font-weight: 600;
+			font-size: 20px;
+		}
+		.name {
+			margin-left: 4px;
+			font-weight: 600;
+			font-size: 20px;
+			line-height: 20px;
+		}
+	}
+}
